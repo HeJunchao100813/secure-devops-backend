@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Secure DevOps Frontend</title>
+  </head>
+  <body>
+    <h1>Welcome to Secure DevOps Frontend!</h1>
+
+    <form method="GET">
+      <input name="name" placeholder="Enter your name" />
+      <input type="submit" />
+    </form>
+
+    <p>Hello, <span id="output"></span></p>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById('output').innerHTML = params.get('name');
+    </script>
+  </body>
+</html>
